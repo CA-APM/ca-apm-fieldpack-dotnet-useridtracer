@@ -1,8 +1,10 @@
 
 # README
 
-The linuxStatus.py file is an example of how to utilize the EPAgent RESTful interface to send bulk metrics.  The script monitors a Linux host, gathering statistics about CPU usage, load averages, and memory usage for the host.  It submits those statistics as metrics (formatted in JSON) to CA APM Enterprise Manager via the EPAgent RESTful interface on a 15-second harvest cycle.  Metrics are submitted to the http://<epagenthost-port>/apm/metricFeed URL.
+UserIDDecoratorTracer is a fully functional extension for CA APM .NET Agent to get and display user information in the Transaction Trace ("TT") TypeViewer and trace info.
 
-The script is fully functional and requires that the Requests module for Python be installed.
+Reflection is used to call one of two methods to grab the user identity from your ASP.NET application: Request cookie or NTLM authenticated user.
 
-Additional details are available on the [CA APM Developer Community](http://bit.ly/caapm_dev/).
+To use, place the extension (DLL) in your agent's EXT directory and your ProbeBuilder Directive (PBD) in your HOTDEPLOY directory. Then restart IIS.
+
+Additional details are available in the RELEASENOTES and on the [CA APM Developer Community](http://bit.ly/caapm_dev/).
