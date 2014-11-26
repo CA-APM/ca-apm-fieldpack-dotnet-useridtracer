@@ -24,7 +24,7 @@ Restart IIS when the installation's complete.
 If for any reason you need to modify how and when the tracer is called, do this via userIdtracer.pbd.
 Do NOT alter the directive "SetTracerClassMapping"!
 
-## <a name="troubleshooting"></a>troubleshooting
+## <a name="troubleshooting"></a>TROUBLESHOOTING
 
 Locate and edit logging.xml.
 Change the logging level from INFO to DEBUG, then save.
