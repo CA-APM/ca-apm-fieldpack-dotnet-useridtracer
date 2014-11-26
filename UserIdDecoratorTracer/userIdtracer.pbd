@@ -1,0 +1,17 @@
+## .NET Generic User ID Tracer
+# written by - Hiko Davis, CA Technologies
+# 11/19/2014; initial build
+
+# NOTE: DO NOT ALTER THIS PBD! THIS IS DESIGNED SPECIFICALLY TO BE USED BY THE CUSTOM USER ID TRACER!
+
+SetTracerClassMapping: UserIdTracer com.wily.introscope.extension.agentextension.UserIDDecoratorTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+
+SetFlag: UserIdTracer
+TurnOn: UserIdTracer
+
+IdentifyClassAs: [System.Net.Http]System.Net.Http.HttpClient UserIdTracer
+ 
+TraceOneMethodWithParametersIfFlagged: UserIdTracer SendAsync UserIdTracing "HttpClient|{assemblyname}|{namespaceandclassname}|{method}"
+
+## works with dotnet-mvc4.pbd written by Jake Nelson and modified by Hiko Davis
+#TraceComplexMethodsIfFlagged: DotNetMvcControllers UserIdTracer "MVC|Controllers"
